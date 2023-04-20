@@ -1,0 +1,162 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial;
+    margin: 0;
+    background-color: #1A1B1C;
+}
+
+.header {
+    padding: 3rem;
+    text-align: left;
+    background-image: url(https://cdn.wallpapersafari.com/66/87/YWhEzr.jpg);
+    border-radius: 30px;
+}
+
+h1 {
+    color: white;
+    margin-right: 10px;
+    margin-bottom: 50px;
+    width: 400px;
+    opacity: .85;
+}
+
+em {
+    color: mediumvioletred;
+}
+
+th, td {
+    border: 1px solid #303638;
+}
+
+nav a {
+    color: whitesmoke;
+    padding: 1.5rem;
+}
+
+nav {
+    display: flex;
+    background-color: #1A1C1F;
+    border-radius: 20px;
+    justify-content: right;
+}
+
+#top a:hover, #bottom a:hover {
+    background-color: dodgerblue;
+    border-radius: 20px;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    margin-left: 20px;
+}
+
+main {
+    display: flex;
+    height: 65vh;
+    justify-content: space-evenly;
+    display: flex;
+}
+
+    main #enterdata, #largebox {
+        font-size: 16px;
+        text-align: center;
+        border-radius: 50px;
+        margin: 20px;
+        padding: 20px;
+        width: 400px;
+        background-color: #27292a;
+        color: white;
+    }
+
+    main #enterdata {
+        flex: 30%;
+    }
+
+    main #largebox {
+        flex: 70%;
+    }
+
+input {
+    width: 6rem;
+}
+
+
+
+#bottom {
+    justify-content: center;
+}
+
+ol {
+    padding-left: 3rem;
+}
+
+#container {
+    margin-right: auto;
+    margin-left: auto;
+    padding: 20px;
+    max-width: 1250px;
+    background-color: #1F2122;
+    border-radius: 50px;
+}
+
+footer {
+    padding: 20px;
+    text-align: center;
+    background: #ddd;
+}
+
+/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 700px) {
+    .row, .navbar {
+        flex-direction: column;
+    }
+}
+
+
+
+/*button stuff*/
+.btn {
+    background-color: antiquewhite;
+    padding: 10px 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.9);
+    /* removes the hyperlink underline from the button */
+
+    color: black;
+    position: relative;
+    /* To remove extra parts of the circle */
+    overflow: hidden;
+}
+
+/* This would make it so we can SEE the text of "Button" over everything else like the hover */
+.btn span{
+    position: relative;
+    z-index: 1; 
+}
+
+.btn::before {
+    content: "";
+    /* We need to position this to absolute. In order to have this to be absolute. The parents (.btn) to be relative */
+    position: absolute;
+    background-color: cornflowerblue;
+    width: 0;
+    height: 0;
+    /* These can he changable in javascript */
+    left: var(--xPos);
+    top: var(--yPos);
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    transition: width 0.5s, height 0.5s;
+}
+
+.btn:hover::before {
+    width: 400px;
+    height: 400px;
+}
+

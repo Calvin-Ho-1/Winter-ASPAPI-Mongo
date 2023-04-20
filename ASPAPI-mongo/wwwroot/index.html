@@ -1,0 +1,137 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="css/site.css">
+</head>
+<body>
+    <!--<h2 style="text-align: center;">Orders</h2>-->
+
+    <div id="container">
+        <nav id="top">
+            <a href="#">Home</a>
+            <a href="#">Browse</a>
+            <a href="#">Details</a>
+            <a href="#">Search</a>
+        </nav>
+
+        <div class="header">
+            <h1>Welcome to Orderzon</h1>
+            <h1><em>ORDER</em> THE THINGS YOU DESIRE</h1>
+        </div>
+        <main>
+            <div id="enterdata">
+                <div class="box1">
+                    <label for="newProduct">Enter New Product Name:</label>
+                    <input type="text" id="newProduct" name="newProduct"> <br />
+                    <p></p>
+                    Product Description: <input type="text" id="newProductDesc" name="newProductDesc"> <br />
+                    <p></p>
+                    Product Rating: <input type="number" id="newProductRating" name="newProductRating"> <br />
+                    <p></p>
+                    <button id="newProductButton" class="btn" type="button" onclick="newProductButton()"><span>Add Product</span></button>
+                    <hr />
+                </div>
+
+
+                <div class="box2">
+                    <label>New Customer</label><br />
+                    Customer Name: <input type="text" id="newCustomerName" name="newCustomerName" width="12">
+                    <p></p>
+                    Phone Number: <input type="number" id="newPhoneNumber" name="newPhoneNumber" width="12">
+                    <p></p>
+                    <button id="newCustomerButton" class="btn" type="button" onclick="newCustomerButton()"><span>Add Customer</span></button>
+                    <hr />
+                    Transaction Type: <input type="text" id="transactionType" name="transactionType" width="50"><br />
+                    <p></p>
+                    Customer:  <select id="customerList" name="customerList"></select><br />
+                    <p></p>
+                    Product:  <select id="productList" name="productList"></select><br />
+
+                    <br />
+                    <button id="addOrderButton" class="btn" type="button" onclick="addOrderButton()"><span>Add Order</span></button>
+                    <button id="showButton" class="btn" type="button" onclick="showButton()"><span>Refresh Order List</span></button>
+
+                </div>
+            </div>
+            <div id="largebox">
+                <div class="box3">
+                    <br />
+                    <h2><em>Here Are Our Current Orders</em> </h2>
+                    <!--This is where the table is-->
+                    <table id="ordertable"></table>
+
+                    <br />
+                    <!--Title:<input type="text" id="title" name="title" width="50">-->
+                    <!--Custom Order ID:<input type="number" id="orderID" name="orderID" width="20"><br />-->
+
+
+                    <div class="box4">
+                        <p>Backup Section</p>
+                        <button id="backupButton" class="btn" type="button" onclick="backupButton()"><span>Backup Data</span></button>  <br />
+                        <button id="displayBackupButton" class="btn" type="button" onclick="displayBackupButton()"><span>Show Backed Up Data</span></button>  <br />
+                    </div>
+
+                </div>
+        </main>
+        <nav id="bottom">
+            <a href="#">Return Policy</a>
+            <a href="#">User Agreement</a>
+            <a href="#">Contact Us</a>
+            <a href="#">Careers</a>
+        </nav>
+
+    </div>
+
+    <!--<div class="myGrid">
+
+        <div class="box1">
+            <label for="newProduct">New Product</label>
+            <input type="text" id="newProduct" name="newProduct" width="40">
+            Product Description: <input type="text" id="newProductDesc" name="newProductDesc" width="40"> <br />
+            Product Rating: <input type="number" id="newProductRating" name="newProductRating" width="40">
+            <button id="newProductButton" type="button" onclick="newProductButton()">Add Product</button>  <br />
+            <br><br>
+        </div>
+
+
+        <div class="box2">
+            <label>New Customer</label><br />
+            Customer Name: <input type="text" id="newCustomerName" name="newCustomerName" width="12"><br />
+            Phone Number: <input type="number" id="newPhoneNumber" name="newPhoneNumber" width="12"><br />
+            <button id="newCustomerButton" type="button" onclick="newCustomerButton()">Add Customer</button>  <br />
+            <br><br>
+        </div>
+
+
+        <br><br><br>
+                <div class="box3">
+                    <br /><br />-->
+    <!--This is where the table is-->
+    <!--<table id="ordertable"></table>
+
+    <br /><br />-->
+    <!--Title:<input type="text" id="title" name="title" width="50">-->
+    <!--Custom Order ID:<input type="number" id="orderID" name="orderID" width="20"><br />-->
+    <!--Transaction Type:<input type="text" id="transactionType" name="transactionType" width="50"><br />
+
+                Customer:<select id="customerList" name="customerList" width="40"></select><br />
+                Product:<select id="productList" name="productList" width="40"></select><br />
+
+                <br />
+                <button id="addOrderButton" type="button" onclick="addOrderButton()">Add Order</button>
+                <button id="showButton" type="button" onclick="showButton()">Refresh Order List</button>
+                <br />
+
+            </div>
+    <div class="box4">
+        <p>Backup</p>
+        <button id="backupButton" type="button" onclick="backupButton()">Backup Data</button>  <br />
+        <button id="displayBackupButton" type="button" onclick="displayBackupButton()">Show Backed Up Data</button>  <br />
+    </div>-->
+    </div>
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
+    <script src="js/site.js"></script>
+</body>
+</html>
